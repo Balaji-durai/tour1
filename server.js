@@ -92,7 +92,7 @@ app.delete('api/IndiaState/delete_state',function(req,res){
 //search state
 app.get('api/IndiaState/search_state',function(req,res){
   const one=req.body.name;
-  list.find(/one/i,function(err,data){
+  list.find({name: /one/i},function(err,data){
     if (err) throw err;
     res.json(data);
   })
